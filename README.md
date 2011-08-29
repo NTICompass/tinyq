@@ -21,7 +21,7 @@ Add functions to it.
        console.log(varA);
     });
 
-Get its length;
+Get its length.
 
     alert(Q.length);
 
