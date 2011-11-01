@@ -1,13 +1,12 @@
 function q(){
-	var Q = [];
-	var t = this;
+	var Q = [], t = this;
 	this.length = 0;
 	this.add = function (f){
 		Q.push(f);
 		this.length++;
 	};
 	this.run = function(){
-	var n = Q.shift();
+		var n = Q.shift();
 		this.length = Q.length;
 		if(typeof n === 'function'){
 			var a = Array.prototype.slice;
@@ -16,4 +15,4 @@ function q(){
 			}].concat(a.call(arguments)));
 		}
 	};
-};
+}
