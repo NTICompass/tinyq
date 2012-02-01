@@ -10,8 +10,8 @@ function q(){
 		this.length = Q.length;
 		if(typeof n === 'function'){
 			var a = Array.prototype.slice;
-			return n.apply(window,[function(){
-				return t.run.apply(t, a.call(arguments));
+			return n.apply(null,[function(){
+				return t.run.apply(t, arguments);
 			}].concat(a.call(arguments)));
 		}
 	};
