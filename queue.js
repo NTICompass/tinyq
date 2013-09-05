@@ -9,10 +9,8 @@ function q(){
 		var n = Q.shift();
 		this.length = Q.length;
 		if(typeof n === 'function'){
-			var a = Array.prototype.slice;
-			return n.apply(null,[function(){
-				return t.run.apply(t, arguments);
-			}].concat(a.call(arguments)));
+			var args = Array.prototype.concat.apply([t.run], arguments);
+			return n.apply(null, args);
 		}
 	};
 }
